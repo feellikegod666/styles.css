@@ -1,0 +1,336 @@
+@import "https://use.fontawesome.com/releases/v6.0.0/css/all.css";
+
+/*animations*/
+.spinner {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid;
+    border-radius: 50%;
+    animation: spinner 0.75s linear infinite;
+
+    border-color: #ff8080 transparent transparent transparent;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0turn);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fade_in;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.5s;
+}
+
+@keyframes fade_in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/*alerts*/
+.alert {
+    border-radius: 3px;
+    padding: 10px;
+    margin: 5px;
+    word-wrap: break-word;
+    font-family: verdana;
+    font-size: 12px;
+}
+.alert:before {
+    font-family: "font awesome 6 free";
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.alert[type=error] {
+    color: rgb(175, 70, 70);
+    background: rgb(253, 182, 182); 
+    border: 1px rgb(255, 144, 144) solid;
+}
+.alert[type=error]:before {
+    content: "\f06a";
+}
+
+.alert[type=warning] {
+    color: rgb(146, 114, 0);
+    background: rgb(252, 227, 139); 
+    border: 1px rgb(255, 208, 38) solid;
+}
+.alert[type=warning]:before {
+    content: "\f06a";
+}
+
+.alert[type=success] {
+    color: rgb(70, 175, 70);
+    background: rgb(179, 255, 179); 
+    border: 1px rgb(137, 255, 137) solid; 
+}
+.alert[type=success]:before {
+    content: "\f058";
+}
+
+.alert[type=message] {
+    color: rgb(0, 108, 170);
+    background: rgb(163, 221, 255); 
+    border: 1px rgb(58, 180, 250) solid; 
+}
+.alert[type=message]:before {
+    content: "\f05a";
+}
+
+/*styles*/
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    
+    border: 1px rgb(30, 30, 30) solid;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    background: rgb(255, 128, 128);
+    border: 1px rgb(30, 30, 30) solid;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    background-color: rgb(20, 20, 20);
+    margin: 0;
+}
+
+form {
+    margin: 0;
+}
+
+.g-recaptcha {
+    margin-top: -5px;
+}
+
+a, button, input, table, .navigation {
+    color: rgb(200, 200, 200);
+    font-family: verdana;
+    font-size: 11px;
+}
+
+small {
+    color: rgb(150, 150, 150);
+}
+
+a[href] {
+    transition-duration: .3s;
+    font-weight: bold;
+}
+a[href]:hover {
+    color: #ff8080;
+}
+
+button {
+    border-radius: 3px;
+    transition-duration: .3s;
+    height: 25px;
+    width: 100%;
+
+    background: linear-gradient(rgb(30, 30, 30), rgb(15, 15, 15));
+    border: 1px rgb(0, 0, 0) solid;
+}
+button[type=same-line] {
+    margin-right: -1px; 
+    vertical-align: top;
+}
+button:hover {
+    color: white;
+    border-color: #ff8080;
+}
+button[type=discord]:hover {
+    border-color: rgb(114, 137, 218);
+}
+button:active {
+    background: linear-gradient(rgb(35, 35, 35), rgb(20, 20, 20));
+}
+
+input {
+    border-radius: 3px;
+    transition-duration: .3s;
+    height: 25px;
+    width: 100%;
+    padding: 5px;
+
+    caret-color: white;
+    background: rgb(20, 20, 20);
+    border: 1px rgb(0, 0, 0) solid;
+}
+input:hover, input:focus {
+    border-color: #ff8080;
+}
+input:focus {
+    color: white;
+    outline: none;
+}
+input::selection {
+    background: #ff8080;
+}
+
+table {
+    padding: 1px;
+    transition-duration: .3s;
+    border-radius: 3px;
+
+    background: rgb(20, 20, 20);
+    border: 1px rgb(0, 0, 0) solid;
+}
+table:hover {
+    border-color: #ff8080;
+}
+tr {
+    transition-duration: .3s;
+}
+tr:hover {
+    background: rgb(30, 30, 30);
+}
+tr:active {
+    background: rgb(35, 35, 35);
+}
+td {
+    padding: 5px;
+}
+td.status:after {
+    font-family: "font awesome 6 free";
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+td.status[status=undetected]:after {
+    content: "\f00c";
+    color: #AAEEB1;
+    background: #233527;
+    border: 1px #39653C solid;
+}
+td.status[status=updating]:after {
+    content: "\f0ad";
+    color: #FDEE9B;
+    background: #393722;
+    border: 1px #605C39 solid;
+}
+
+.center {
+    margin-top: 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    border-radius: 3px;
+    padding: 10px;
+    margin: 5px;
+    display: grid;
+    grid-row-gap: 5px;
+
+    background: rgb(25, 25, 25);
+    border: 1px rgb(0, 0, 0) solid;
+}
+.container .title {
+    font-weight: bold;
+    font-size: 12px;
+    
+    color: white;
+}
+.container .separator {
+    height: 1px;
+    background: #ff8080
+}
+
+.same-line {
+    margin: 0;
+}
+
+.navigation {
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    background: rgb(20, 20, 20);
+    top: 0;
+}
+.navigation a:not(:first-child) {
+    padding: 15px;
+    text-decoration: none;
+    margin-bottom: 0.5%;
+    margin-top: 0.5%;
+    transition-duration: 0.3s;
+    font-size: 13px;
+
+    color: rgb(200, 200, 200);
+    font-weight: lighter;
+}
+.navigation a:not(:last-of-type):not(:first-child) {
+    border-left: 1px solid rgb(30, 30, 30);
+}
+.navigation a:hover {
+    color:#ff8080;
+}
+.navigation a.left {
+    float: left;
+    padding-left: 64px;
+}
+.navigation a.right {
+    float: right;
+}
+.navigation .line {
+    height: 1px;
+    background-color: rgb(30, 30, 30);
+}
+
+.rank-tag {
+    border-radius: 3px;
+    padding: 2px;
+    margin: 2px;
+    font-weight: 900;
+    font-family: verdana;
+
+    color: rgb(30, 30, 30);
+    background: #ff8080;
+    box-shadow: 0 0 5px #ff8080;
+}
+
+.copyright {
+    transition-duration: 0.3s;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    font-style: italic;
+
+    color: rgb(225, 225, 225, 0.075);
+}
